@@ -201,7 +201,9 @@
     // `createAll()`  
     // Creates multiple `audiojs` instances.  
     // If `elements` is `null`, then automatically find any `<audio>` tags on the page and create `audiojs` instances for them.
-    createAll: function(options, elements) {
+    createAll: function(pathToStuff, options, elements) {
+      if(pathToStuff) path = pathToStuff;
+
       var audioElements = elements || document.getElementsByTagName('audio'),
           instances = []
           options = options || {};
